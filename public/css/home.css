@@ -1,0 +1,341 @@
+body{
+    background-image: url("../img/background.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#top-page{
+    width: 100%;
+    color: blueviolet;
+    position: relative;
+    
+}
+#top-page h1,
+#top-page p{
+    position: absolute;
+}
+h2{
+    margin: 0;
+    font-size: 4rem;
+}
+
+a{
+    text-decoration: none;
+}
+.top-logo{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    margin: 0;
+}
+.top-background{
+    background-image: url('../img/topbackground.png');
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+}
+section{
+    width: 100%;
+    margin: 0 0 30px;
+}
+.section-title{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #E6E6E6;
+    
+}
+#vtuber-introduction{
+    height: auto;
+    /*background-color: aqua;*/
+    
+}
+#news-events{
+    height: auto;
+}
+#content-gallery{
+    height: 400px;
+}
+#contact-support{
+    height: 400px;
+    
+}
+#social-media{
+    height: auto;
+}
+/* ここからがニュース記事のCSS */
+.news_section{
+    background: rgba(0, 0, 77, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    width: 768px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.news-img{
+    width: 200px;
+    height: auto;
+    margin: 0 20px;
+}
+#news-events a {
+    text-decoration: none;
+    font-size: 2.0rem;
+}
+
+.news_list {
+    width: 700px;
+    margin: 0 auto 0;
+    padding: 0;
+}
+
+.news_list_item {
+  padding: 25px 0;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.news_list_item:first-child {
+  border-top: 1px solid #E6E6E6;
+}
+.news_list_item a {
+ position: relative;
+ display: flex;
+}
+
+.news_list_date {
+  font-size: 15px;
+  margin-right: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+.news_item {
+  border-radius: 14px;
+  /* 親要素の文字サイズを基準 */
+  margin-left: 20px;
+  color: aliceblue;
+  font-size: 2.0rem;
+}
+.btn_space{
+    width: 100%;
+    text-align: center;
+}
+.all_news{
+    margin: 20px auto 0px;
+}
+.news_date{
+    color: aliceblue;
+}
+/*.arrow {
+  width: 25px;
+  height: 1px;
+  background: #707070;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.arrow::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 1px;
+  background: #707070;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0px;
+  bottom: 2px;
+}*/
+/*liver*/
+.liver{
+    margin:20px
+}.liver:hover{
+    transform: scale(1.1); /* 5% 増しで表示 */
+    transition: transform 0.3s ease-in-out;
+}
+.liver-img{
+    width:200px;
+    border-radius: 15px;
+    aspect-ratio: 1/1;
+    object-position: 0% 0%;
+    object-fit: cover;
+}
+.liver_name{
+    color: aliceblue;
+    font-size: 2.0rem;
+    margin: 10px;
+}
+.vtuber-profiles{
+    /* From https://css.glass */
+    background: rgba(0, 0, 77, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    width: 768px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.vtuber-profiles,
+.pickup-liver{
+    text-align: center;
+}
+.pickup-liver{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/*support*/
+.support_section{
+    background: rgba(0, 0, 77, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    width: 768px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+/*sns*/
+.sns_section{
+    background: rgba(0, 0, 77, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    width: 768px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+#social-media {
+    text-align: center;
+}
+
+#social-media h2 {
+    margin-bottom: 0.5em;
+}
+.sns_btn_con{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 630px;
+}
+.youtube_icon,.x_icon{
+    height: 40px;
+    margin: 10px 10px;
+}
+.tiktok_icon{
+    height: 60px;
+    border-radius: 50px;
+}
+.sns_button{
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+    margin: 0 5px;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: aliceblue;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.sns_button span{
+    font-size: 2.5rem;
+    text-align: center;
+    align-items: center;
+    padding: auto;
+    width: 120px;
+}
+.sns_button:hover{
+    width: 200px;
+}
+.icon{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 60px;
+    text-align: center;
+}
+.youtube{
+    background-color: #ef857d;
+}
+.x{
+    background-color: #a0d8ef;
+}
+.tiktok{
+    background-color: #000000;
+}
+/* メディアクエリ: タブレット */
+@media (max-width: 768px) {
+    .vtuber-profiles, .news-list, .gallery-items, .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .news_section,.vtuber-profiles,.sns_section,.news_list,.sns_btn_con{
+        width: 100%;
+    }
+    .news_list{
+        padding: 20px;
+    }
+    .vtuber-profiles > div, .news-list > div, .gallery-items > div {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .sns_btn_con,.news_list_item a,.pickup-liver{
+        flex-flow: column;
+    }
+    .sns_button{
+        margin-bottom: 20px;
+    }
+    .news-img{
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .top-background{
+        background-image: url('../img/topbackground_pad.png');
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3/4;
+        background-size: cover;
+        background-position: center;
+    }
+    .news_list_item{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+/* メディアクエリ: スマートフォン */
+@media (max-width: 480px) {
+    .section {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .pickup-liver,.news_list_item a{
+        flex-flow: column;
+    }
+    .news-img{
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .top-background{
+        background-image: url('../img/topbackground_sp.png');
+        width: 100%;
+        height: auto;
+        aspect-ratio: 9/16;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* その他のスマートフォン用スタイル */
+}

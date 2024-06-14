@@ -1,0 +1,16 @@
+<div class="audition_contents">
+  <h1>AUDITION</h1>
+  <form method="POST" action="/audition" class="input_form">
+    <div class="input_tag">名前</div>
+    <input type="text" name="name" placeholder="田中　太郎" class="input_name" required >
+    <div class="input_tag">メールアドレス</div>
+    <input type="email" name="email" placeholder="xxxxx@xxxxx" class="input_mail" required>
+    <div class="input_tag">X（旧Twitter）ID （DMを解放しておいてください）</div>
+    <input type="text" name="x" placeholder="@xxxxxxxxx" class="input_x" required>
+    <div class="input_tag">配信経験を教えてください</div>
+    <textarea name="message" placeholder="ご自由にお書きください" class="input_message"></textarea>
+    <div class="input_tag">質問があれば教えてください</div>
+    <textarea name="message" placeholder="ご自由にお書きください" class="input_message"></textarea>
+    <button type="button" onclick="submit();" class="audition_btn">応募する</button>
+  </form>
+</div>

@@ -1,0 +1,126 @@
+body{
+    background-image: url("../img/background.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.liver_contents{
+    background: rgba(0, 0, 77, 0.45);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
+title{
+    width: 100%;
+    margin:0;
+    text-align: center;
+}
+h1{
+    margin: 0;
+    color: aliceblue;
+    width: 750px;
+    font-size: 4.0rem;
+    margin:0 auto 20px;
+    padding-top: 20px;
+    border-bottom: solid 2px aliceblue;
+}
+.liver_item{
+    width: 760px;
+    display: flex;
+    margin: 0 auto;
+}
+.liver_back{
+    width: 400px;
+    aspect-ratio: 4/7;
+    border-radius: 15px;
+    position: relative;
+}
+.liver_img{
+    width: 300px;
+    aspect-ratio: 1/2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.liver_pr{
+    width: 360px;
+}
+h2{
+    color: aliceblue;
+    font-size: 4.0rem;
+}
+.liver_text{
+    color: aliceblue;
+    font-size: 3.0rem;
+}
+.liver_sns{
+    display:flex;
+    flex-flow: column;
+}
+.liver_sns a{
+    text-decoration: none;
+    font-size: 3.0rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 10px auto;
+    background-color: aliceblue;
+    transition: 0.3s;
+}
+.liver_sns a:nth-child(1){
+    border: 2px solid #33bbff;
+    color: #33bbff;
+}
+.liver_sns a:nth-child(2){
+    border: 2px solid #FF0000;
+    color: #FF0000;
+}
+.liver_sns a:nth-child(3){
+    border: 2px solid #00608d;
+    color: #00608d;
+}
+.liver_sns a:nth-child(4){
+    border: 2px solid #000000;
+    color: #000000;
+}
+.liver_sns a:nth-child(1):hover{
+    color: aliceblue;
+    background-color: #33bbff;
+}
+.liver_sns a:nth-child(2):hover{
+    color: aliceblue;
+    background-color: #FF0000;
+}
+.liver_sns a:nth-child(3):hover{
+    color: aliceblue;
+    background-color: #00608d;
+}
+.liver_sns a:nth-child(4):hover{
+    color: aliceblue;
+    background-color: #000000;
+}
+@media (max-width: 768px) {
+    h1{
+        width: 100%;
+    }
+    .liver_item{
+        flex-flow: column;
+        width: 100%;
+    }
+    .liver_back,.liver_pr{
+        margin: 0 auto;
+    }
+    .liver_back{
+        width: 250px;
+    }
+    .liver_img{
+        width: 200px;
+    }
+}

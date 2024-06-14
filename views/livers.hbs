@@ -1,0 +1,16 @@
+<div class="livers_contents">
+  <div class="title">
+    <h1>LIVER</h1>
+  </div>
+  {{!-- ライバーのリスト --}}
+  <div class="livers">
+    {{#each livers}}
+      <a class="liver" href="/liver/{{this.name_id}}">
+        <img src="img/liver/{{this.img}}.png" alt="{{this.name}}" class="liver_img {{this.img_col}}">
+        <h3 class="liver_name">{{this.name}}</h3>
+        {{!-- SNSリンクの処理 --}}
+      </a>
+    {{/each}}
+  </div>
+
+</div>

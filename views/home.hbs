@@ -1,0 +1,102 @@
+
+{{!------------------------- トップページ -------------------------------------------}}
+<section id="top-page">
+    <div class="top-background">
+</section>
+{{!--------------------- ライバー紹介 -----------------------------}}
+<section id="vtuber-introduction">
+    
+    <div class="vtuber-profiles">
+        <div class="section-title">
+            <h2>LIVER</h2>
+        </div>
+        {{!-- ここに各VTuberのプロフィールを追加 --}}
+        <div class="pickup-liver">
+            {{#each livers}}
+            <a  href="/liver/{{this.name_id}}" class="liver ">
+                <img src="img/liver/{{this.img}}.png" alt="" class="liver-img {{this.img_col}}">
+                <p class="liver_name">{{this.name}}</p>
+            </a>
+            {{/each}}
+        </div>       
+        <a href="livers" class="move-btn "><span>もっと見る</span></a>
+
+    </div>
+</section>
+
+{{!------------------------ ニュース/イベントセクション ---------------------------}}
+<section id="news-events">
+    <div class="news_section">
+        <div class="section-title">
+            <h2>NEWS</h2>
+        </div>
+        <div class="news_list">
+            {{#each news}}
+            <div class="news_list_item">
+                <a href="/topic/{{this.id}}">
+                    <img src="img/news/{{this.img}}" alt="{{this.title}}" class="news-img">
+                    <div class="news_list_date">
+                        <div class="news_date">{{this.date_ap}}</div>
+                        <p class="news_item">{{this.title}}</p>
+                    </div>
+                    
+                    <!--span class="arrow"></span-->
+                </a>
+                
+                
+            </div>
+            {{/each}}
+            <div class="btn_space">
+                <a href="/news" class="all_news move-btn"><span>もっと見る</span></a>
+            </div>
+            
+        </div>  
+    </div>
+    
+    
+</section>
+
+{{!----------------------------- コンテンツギャラリー --------------------------------}}
+{{!<section id="content-gallery">
+    <div class="section-title">
+        <h2>Gallery</h2>
+    </div>
+    <div class="gallery-items">}}
+        {{!-- ここにギャラリーアイテムを追加 --}}
+    {{!</div>
+</section>
+}}
+{{!----------------------------------- 連絡先/サポートページ --------------------------------}}
+<!--section id="contact-support">
+    <div class="support_section">
+        <div class="section-title">
+            <h2>supprt</h2>
+        </div>
+        <p>Have questions? Reach out to us!</p>
+        <a href="mailto:contact@vtuberagency.com">contact@vtuberagency.com</a>
+    </div>
+</section-->
+
+{{!--------------------------- SNSリンク -----------------------------------------------------}}
+<section id="social-media">
+    <div class="sns_section">
+        <div class="section-title">
+            <h2>公式アカウント</h2>
+        </div>
+        <div class="sns_btn_con">
+            <div class="sns_button">
+                <div class="icon youtube"><img src="/img/youtube_icon.png" alt="youtube_icon" class="youtube_icon"></div>
+                <span>YouTube</span>
+            </div>
+            <div class="sns_button">
+                <div class="icon x"><img src="/img/x_icon.png" alt="x_icon" class="x_icon"></div>
+                <span>X</span>
+            </div>
+            <div class="sns_button">
+                <div class="icon tiktok"><img src="/img/tiktok_icon.png" alt="tiktok_icon" class="tiktok_icon"></div>
+                <span>TikTok</span>
+            </div>
+        </div>
+    </div>
+    
+</section>
