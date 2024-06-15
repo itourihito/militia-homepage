@@ -225,3 +225,5 @@ app.get("/contactSuc",(req,res)=>{
 app.listen(process.env.PORT,() => console.log("サーバー起動"));
 
 
+
+process.env.herokukey
