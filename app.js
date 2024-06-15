@@ -222,6 +222,6 @@ app.get("/contactSuc",(req,res)=>{
         style:"contactSuc"
     })
 })
-app.listen(PORT,host,() => console.log("サーバー起動"));
+app.listen(process.env.PORT,() => console.log("サーバー起動"));
 
 
