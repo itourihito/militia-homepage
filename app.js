@@ -226,4 +226,9 @@ app.listen(process.env.PORT,() => console.log("サーバー起動"));
 
 
 
-process.env.herokukey
+process.env.DB_HOST;
+process.env.DB_USER;
+process.env.DB_PASSWORD;
+process.env.DB_NAME;
+process.env.EMAIL_USER;
+process.env.EMAIL_PASS;
