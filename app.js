@@ -9,13 +9,12 @@ if (result.error) {
 const express = require("express");
 const nodemailer = require('nodemailer');
 const {engine}  = require("express-handlebars");
-const app = express();
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
-const host = "133.68.40.124";
+const app = express();
 
-
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
+const host = process.env.HOST || "localhost";
 
 const db = mysql.createPool({
     connectionLimit:10,
@@ -222,13 +221,7 @@ app.get("/contactSuc",(req,res)=>{
         style:"contactSuc"
     })
 })
-app.listen(process.env.PORT,() => console.log("サーバー起動"));
+app.listen(PORT,() => console.log("サーバー起動"));
 
 
 
-process.env.DB_HOST;
-process.env.DB_USER;
-process.env.DB_PASSWORD;
-process.env.DB_NAME;
-process.env.EMAIL_USER;
-process.env.EMAIL_PASS;
