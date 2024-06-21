@@ -1,9 +1,10 @@
-const dotenv = require('dotenv');
-const result = dotenv.config();
-if (result.error) {
-    console.error("Error loading .env file:", result.error);
-} else {
-    console.log("Environment variables loaded:", result.parsed);
+if (process.env.NODE_ENV !== 'production') {
+    const result = dotenv.config();
+    if (result.error) {
+        console.error("Error loading .env file:", result.error);
+    } else {
+        console.log("Environment variables loaded:", result.parsed);
+    }
 }
 
 const express = require("express");
@@ -11,23 +12,24 @@ const nodemailer = require('nodemailer');
 const {engine}  = require("express-handlebars");
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
+const config = require('./config'); 
 const app = express();
 
 const PORT = process.env.PORT || 8080;
 const host = process.env.HOST || "localhost";
 
 const db = mysql.createPool({
-    connectionLimit:10,
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    connectionLimit: 10,
+    host: config.database.host,
+    user: config.database.user,
+    password: config.database.password,
+    database: config.database.name
 })
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
+        user: config.email.user,
+        pass: config.email.pass
     }
 });
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -142,8 +144,8 @@ app.post('/audition', (req, res) => {
     };
 
     const companyMailOptions = {
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_USER,
+        from: config.email.user,
+        to: config.email.user,
         subject: '新しい求人応募',
         text: `こんにちは。\n\n${name}さんからの新しい応募がありました。\n\n${email}`
     };
@@ -182,15 +184,15 @@ app.get("/contact",(req,res)=>{
 app.post('/contact', (req, res) => {
     const { name, email, message } = req.body;
     const applicantMailOptions = {
-        from: process.env.EMAIL_USER,
+        from: config.email.user,
         to: email,
         subject: 'メッセージ送信の確認',
         text: `こんにちは ${name}さん。\n\nあなたのメッセージを受け付けました。`
     };
 
     const companyMailOptions = {
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_USER,
+        from: config.email.user,
+        to: config.email.user,
         subject: '新しいメッセージ',
         text: `こんにちは。\n\n${name}さんからの新しいメッセージがありました。\n\n${email}`
     };
