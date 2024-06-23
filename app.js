@@ -11,20 +11,13 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require("express");
 const nodemailer = require('nodemailer');
 const { engine } = require("express-handlebars");
-const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const config = require('./config');
+const { pool } = require('./config');
 const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-const db = mysql.createPool({
-    connectionLimit: 10,
-    host: config.database.host,
-    user: config.database.user,
-    password: config.database.password,
-    database: config.database.name
-});
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -54,19 +47,19 @@ app.get("/", (req, res) => {
     let queryNews = 'SELECT * FROM news ORDER BY date DESC LIMIT 3'; // ニュースを取得するSQLクエリ
     let queryStreamers = 'SELECT * FROM livers where pick = 1'; // ストリーマーを取得するSQLクエリ
 
-    db.query(queryNews, (err, newsResults) => {
+    pool.query(queryNews, (err, newsResults) => {
         if (err) {
             console.error(err);
             return res.status(500).send("Internal Server Error");
         }
-        db.query(queryStreamers, (err, streamersResults) => {
+        pool.query(queryStreamers, (err, streamersResults) => {
             if (err) {
                 console.error(err);
                 return res.status(500).send("Internal Server Error");
             }
             res.render('home', {
-                news: newsResults,
-                livers: streamersResults,
+                news: newsResults.rows,
+                livers: streamersResults.rows,
                 style: 'home',
                 script: "home"
             });
@@ -75,13 +68,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/livers", (req, res) => {
-    db.query('SELECT * FROM livers', (error, results) => {
+    pool.query('SELECT * FROM livers', (error, results) => {
         if (error) {
             console.error(error);
             return res.status(500).send("Internal Server Error");
         }
         res.render('livers', {
-            livers: results,
+            livers: results.rows,
             style: "livers"
         });
     });
@@ -89,27 +82,27 @@ app.get("/livers", (req, res) => {
 
 app.get("/liver/:name_id", (req, res) => {
     const liverId = req.params.name_id;
-    let query = 'SELECT * FROM livers WHERE name_id = ?';
-    db.query(query, [liverId], (err, result) => {
+    let query = 'SELECT * FROM livers WHERE name_id = $1';
+    pool.query(query, [liverId], (err, result) => {
         if (err) {
             console.error(err);
             return res.status(500).send("Internal Server Error");
         }
         res.render("liver", {
-            liver: result[0],
+            liver: result.rows[0],
             style: "liver"
         });
     });
 });
 
 app.get("/news", (req, res) => {
-    db.query('SELECT * FROM news ORDER BY date DESC', (error, results) => {
+    pool.query('SELECT * FROM news ORDER BY date DESC', (error, results) => {
         if (error) {
             console.error(error);
             return res.status(500).send("Internal Server Error");
         }
         res.render('news', {
-            news: results,
+            news: results.rows,
             style: "news"
         });
     });
@@ -117,14 +110,14 @@ app.get("/news", (req, res) => {
 
 app.get("/topic/:id", (req, res) => {
     const topicId = req.params.id;
-    let query = 'SELECT * FROM news WHERE id = ?';
-    db.query(query, [topicId], (err, result) => {
+    let query = 'SELECT * FROM news WHERE id = $1';
+    pool.query(query, [topicId], (err, result) => {
         if (err) {
             console.error(err);
             return res.status(500).send("Internal Server Error");
         }
         res.render("topic", {
-            news: result[0],
+            news: result.rows[0],
             style: "topic"
         });
     });
@@ -152,8 +145,8 @@ app.post('/audition', (req, res) => {
         text: `こんにちは。\n\n${name}さんからの新しい応募がありました。\n\n${email}`
     };
 
-    let query = 'INSERT INTO auditions (name, email, message) VALUES (?, ?, ?)';
-    db.query(query, [name, email, message], (err) => {
+    let query = 'INSERT INTO auditions (name, email, message) VALUES ($1, $2, $3)';
+    pool.query(query, [name, email, message], (err) => {
         if (err) {
             console.error(err);
             return res.status(500).send("Internal Server Error");
@@ -202,8 +195,8 @@ app.post('/contact', (req, res) => {
         text: `こんにちは。\n\n${name}さんからの新しいメッセージがありました。\n\n${email}`
     };
 
-    let query = 'INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)';
-    db.query(query, [name, email, message], (err) => {
+    let query = 'INSERT INTO contacts (name, email, message) VALUES ($1, $2, $3)';
+    pool.query(query, [name, email, message], (err) => {
         if (err) {
             console.error(err);
             return res.status(500).send("Internal Server Error");
