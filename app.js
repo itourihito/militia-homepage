@@ -58,8 +58,8 @@ app.get("/", (req, res) => {
                 return res.status(500).send("Internal Server Error");
             }
             res.render('home', {
-                news: newsResults,
-                livers: streamersResults,
+                news: newsResults.rows,
+                livers: streamersResults.rows,
                 style: 'home',
                 script: "home"
             });
@@ -74,7 +74,7 @@ app.get("/livers", (req, res) => {
             return res.status(500).send("Internal Server Error");
         }
         res.render('livers', {
-            livers: results,
+            livers: results.rows,
             style: "livers"
         });
     });
@@ -89,7 +89,7 @@ app.get("/liver/:name_id", (req, res) => {
             return res.status(500).send("Internal Server Error");
         }
         res.render("liver", {
-            liver: result[0],
+            liver: result.rows[0],
             style: "liver"
         });
     });
@@ -102,7 +102,7 @@ app.get("/news", (req, res) => {
             return res.status(500).send("Internal Server Error");
         }
         res.render('news', {
-            news: results,
+            news: results.rows,
             style: "news"
         });
     });
@@ -117,7 +117,7 @@ app.get("/topic/:id", (req, res) => {
             return res.status(500).send("Internal Server Error");
         }
         res.render("topic", {
-            news: result[0],
+            news: result.rows[0],
             style: "topic"
         });
     });
