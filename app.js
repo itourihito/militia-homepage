@@ -192,7 +192,7 @@ app.post('/contact', (req, res) => {
         from: config.email.user,
         to: config.email.user,
         subject: '新しいメッセージ',
-        text: `こんにちは。\n\n${name}さんからの新しいメッセージがありました。\n\n${email}`
+        text: `こんにちは。\n\n${name}さんからの新しいメッセージがありました。\n\n${email}\n\n${message}`
     };
 
     let query = 'INSERT INTO contacts (name, email, message) VALUES ($1, $2, $3)';
