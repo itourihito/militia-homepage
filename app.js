@@ -11,6 +11,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require("express");
 const nodemailer = require('nodemailer');
 const { engine } = require("express-handlebars");
+const Handlebars = require('handlebars'); 
 const bodyParser = require('body-parser');
 const config = require('./config');
 const { pool } = require('./config');
@@ -28,8 +29,9 @@ const transporter = nodemailer.createTransport({
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
-const hbs = exphbs.create({
+const hbs = engine({
     defaultLayout: 'main',
     extname: '.hbs',
     helpers: {
@@ -39,9 +41,9 @@ const hbs = exphbs.create({
       }
     }
   });
-app.engine('hbs', hbs.engine);
+app.engine('hbs', hbs);
 app.set('view engine', 'hbs');
-app.use(express.static('public'));
+
 
 app.get("/", (req, res) => {
     let queryNews = 'SELECT * FROM news ORDER BY date DESC LIMIT 3'; // ニュースを取得するSQLクエリ
