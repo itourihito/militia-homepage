@@ -46,7 +46,7 @@ header{
     display: flex;
 }
 .header-nav li {
-    height: 45px;
+    height: 30px;
     margin: 0 ; /* 必要に応じて */
     padding: 0 5px; /* 必要に応じて */
     display: flex; /* <li> 内のアイテムを中央に配置 */
@@ -64,9 +64,9 @@ header{
     width: 100%; /* 親要素の幅に合わせる */
     height: 100%; /* 親要素の高さに合わせる */
     color: #333;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     text-align: center; /* テキストを中央揃え */
-    line-height: 45px; /* リンクの高さを指定して垂直中央揃えに */
+    line-height: 30px; /* リンクの高さを指定して垂直中央揃えに */
     transition:  0.3s ease; /* ホバー時の遷移をスムーズに */
 }
 .header-nav li:hover {
