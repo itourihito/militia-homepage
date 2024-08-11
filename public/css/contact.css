@@ -5,10 +5,6 @@ body{
     background-attachment: fixed;
 }
 .contact_contents{
-    background: rgba(0, 0, 77, 0.45);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.7px);
-    -webkit-backdrop-filter: blur(6.7px);
     width: 100%;
     margin: auto;
     padding-bottom: 20px;
