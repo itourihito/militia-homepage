@@ -67,11 +67,11 @@ section{
 }
 /* ここからがニュース記事のCSS */
 .news_section{
-    background: rgba(0, 0, 77, 0.45);
+    /*background: rgba(0, 0, 77, 0.45);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.7px);
-    -webkit-backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);*/
     width: 768px;
     margin: auto;
     padding-bottom: 20px;
