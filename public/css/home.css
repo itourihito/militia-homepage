@@ -170,14 +170,11 @@ section{
 }
 .vtuber-profiles{
     /* From https://css.glass */
-    background: rgba(0, 0, 77, 0.45);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.7px);
-    -webkit-backdrop-filter: blur(6.7px);
-    width: 768px;
-    margin: auto;
+    
     padding-bottom: 20px;
+}
+.talenttag{
+    width: 500px;
 }
 .vtuber-profiles,
 .pickup-liver{
