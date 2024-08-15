@@ -204,6 +204,10 @@ section{
     width: 100%;
     margin: auto;
     padding-bottom: 20px;
+    display: flex;
+}
+.futtarlogo{
+    height: 40px;
 }
 #social-media {
     text-align: center;
