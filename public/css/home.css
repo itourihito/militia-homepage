@@ -206,8 +206,12 @@ section{
     padding: 20px;
     display: flex;
 }
+.jimushotag{
+    width: 50%;
+}
 .futtarlogo{
     height: 80px;
+    margin: auto;
 }
 #social-media {
     text-align: center;
@@ -221,7 +225,7 @@ section{
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    width: 630px;
+    width: 50%;
 }
 .youtube_icon,.x_icon{
     height: 40px;
@@ -259,7 +263,7 @@ section{
     width: 60px;
     height: 60px;
     border-radius: 50px;
-    margin: 0;
+    margin: 0 40px;
     box-sizing: border-box;
     line-height: 60px;
     text-align: center;
