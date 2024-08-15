@@ -173,7 +173,7 @@ section{
     
     padding-bottom: 20px;
 }
-.vtuverintag{
+.talentintag{
     width: 100%;
 }
 .talenttag{
@@ -184,7 +184,6 @@ section{
     text-align: center;
 }
 .pickup-liver{
-    display: flex;
     justify-content: center;
     width: 100%;
 }
