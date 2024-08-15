@@ -298,6 +298,8 @@ footer{
 .footer_con a{
     text-decoration: none;
     margin: 10px 20px;
+    color: #000;
+    font-size: 15px;
 }
 /* メディアクエリ: タブレット */
 @media (max-width: 768px) {
