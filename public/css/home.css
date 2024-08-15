@@ -203,11 +203,11 @@ section{
     background-color: #E6E6E6;
     width: 100%;
     margin: auto;
-    padding-bottom: 20px;
+    padding: 20px;
     display: flex;
 }
 .futtarlogo{
-    height: 40px;
+    height: 80px;
 }
 #social-media {
     text-align: center;
