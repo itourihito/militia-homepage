@@ -284,9 +284,16 @@ footer{
     height: 60px;
     width: 100%;
     background-color: #ffffff;
+    
+}
+.footer_con{
+    margin: auto;
     display: flex;
     text-align: center;
     align-items: center;
+}
+.footer_con a{
+    text-decoration: none;
 }
 /* メディアクエリ: タブレット */
 @media (max-width: 768px) {
