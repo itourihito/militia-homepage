@@ -203,9 +203,8 @@ section{
     background-color: #E6E6E6;
     width: 100%;
     margin: auto;
-    padding: 20px;
+    padding: 40px 20px;
     display: flex;
-    height: 200px;
 }
 .jimushotag{
     width: 50%;
