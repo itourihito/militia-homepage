@@ -280,6 +280,10 @@ section{
 .tiktok{
     background-color: #000000;
 }
+footer{
+    height: 60px;
+    width: 100%;
+}
 /* メディアクエリ: タブレット */
 @media (max-width: 768px) {
     .vtuber-profiles, .news-list, .gallery-items, .social-icons {
