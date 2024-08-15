@@ -283,6 +283,7 @@ section{
 footer{
     height: 60px;
     width: 100%;
+    background-color: #ffffff;
 }
 /* メディアクエリ: タブレット */
 @media (max-width: 768px) {
