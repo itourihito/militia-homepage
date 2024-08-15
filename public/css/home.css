@@ -179,6 +179,14 @@ section{
 .talenttag{
     height: 80px;
 }
+.talenttr{
+    width: 100%;
+    height: 20px;
+    background-image: url("../img/VTuberlogo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 .vtuber-profiles,
 .pickup-liver{
     text-align: center;
