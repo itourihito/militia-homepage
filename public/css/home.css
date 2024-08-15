@@ -258,7 +258,7 @@ section{
 .sns_button:hover{
     width: 200px;
 }
-snsbtn{
+.snsbtn{
     margin: auto;
 }
 .icon{
@@ -266,7 +266,7 @@ snsbtn{
     width: 60px;
     height: 60px;
     border-radius: 50px;
-    margin: 0 40px;
+    margin: 0 10px;
     box-sizing: border-box;
     line-height: 60px;
     text-align: center;
