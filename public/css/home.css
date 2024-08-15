@@ -258,6 +258,9 @@ section{
 .sns_button:hover{
     width: 200px;
 }
+snsbtn{
+    margin: auto;
+}
 .icon{
     display: inline-block;
     width: 60px;
