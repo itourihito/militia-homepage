@@ -94,11 +94,11 @@ section{
 
 .news_list_item {
   padding: 25px 0;
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #000;
 }
 
 .news_list_item:first-child {
-  border-top: 1px solid #E6E6E6;
+  border-top: 1px solid #000;
 }
 .news_list_item a {
  position: relative;
@@ -116,7 +116,7 @@ section{
   border-radius: 14px;
   /* 親要素の文字サイズを基準 */
   margin-left: 20px;
-  color: aliceblue;
+  color: #000000;
   font-size: 2.0rem;
 }
 .btn_space{
@@ -127,7 +127,7 @@ section{
     margin: 20px auto 0px;
 }
 .news_date{
-    color: aliceblue;
+    color: #000;
 }
 /*.arrow {
   width: 25px;
