@@ -200,12 +200,8 @@ section{
 }
 /*sns*/
 .sns_section{
-    background: rgba(0, 0, 77, 0.45);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.7px);
-    -webkit-backdrop-filter: blur(6.7px);
-    width: 768px;
+    background-color: #E6E6E6;
+    width: 100%;
     margin: auto;
     padding-bottom: 20px;
 }
