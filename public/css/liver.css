@@ -24,6 +24,17 @@ h1{
     padding-top: 20px;
     border-bottom: solid 2px aliceblue;
 }
+.title_space{
+    width: 750px;
+    border-bottom: solid 1px #000;
+    text-align: center;
+    margin: 20px auto 0;
+}
+.maintag{
+    margin:0 auto 20px;
+    text-align: center;
+    height: 40px;
+}
 .liver_item{
     width: 760px;
     display: flex;
