@@ -22,7 +22,13 @@ h1{
     margin:0 auto 20px;
     padding-top: 20px;
     text-align: center;
-    border-bottom: solid 2px aliceblue;
+    border-bottom: solid 2px #000;
+}
+.maintag{
+    margin:0 auto 20px;
+    text-align: center;
+    border-bottom: solid 2px #000;
+    height: 40px;
 }
 .news_list{
     width: 760px;
@@ -45,11 +51,11 @@ h1{
     /* 親要素の文字サイズを基準 */
     font-size: 2.0rem;
     margin-left: 20px;
-    color: aliceblue;
+    color: #000;
   }
 .news_list_item {
     padding: 25px 0;
-    border-bottom: 1px solid #E6E6E6;
+    border-bottom: 1px solid #000;
   }
 
 .news_list_date {
@@ -57,7 +63,7 @@ h1{
     margin-right: 15px;
     align-items: center;
     width: 100%;
-    color: aliceblue;
+    color: #000;
 }
 @media (max-width: 768px) {
     .news_list_item a{
