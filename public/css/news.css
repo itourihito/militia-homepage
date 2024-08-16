@@ -24,10 +24,14 @@ h1{
     text-align: center;
     border-bottom: solid 2px #000;
 }
+.title_space{
+    width: 750px;
+    border-bottom: solid 2px #000;
+    text-align: center;
+}
 .maintag{
     margin:0 auto 20px;
     text-align: center;
-    border-bottom: solid 2px #000;
     height: 40px;
 }
 .news_list{
