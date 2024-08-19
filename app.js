@@ -224,5 +224,9 @@ app.get("/contactSuc", (req, res) => {
         style: "contactSuc"
     });
 });
-
+app.get("/PrivacyPolicy", (req, res) => {
+    res.render("PrivacyPolicy", {
+        style: "PrivacyPolicy"
+    });
+});
 app.listen(PORT, () => console.log(`サーバー起動: ポート${PORT}`));
