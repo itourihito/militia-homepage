@@ -6,6 +6,7 @@ body{
 }
 .privacy{
     max-width: 800px;
+    margin: 0 auto 20px;
 }
 h1{
     font-size: 3.0rem;
