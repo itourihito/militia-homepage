@@ -47,8 +47,7 @@ h1{
     position: relative;
 }
 .liver_img{
-    width: 300px;
-    aspect-ratio: 1/2;
+    width: 400px;
     position: absolute;
     top: 0;
     right: 0;
