@@ -15,15 +15,7 @@ title{
     margin:0;
     text-align: center;
 }
-/*h1{
-    margin: 0;
-    color: aliceblue;
-    width: 750px;
-    font-size: 4.0rem;
-    margin:0 auto 20px;
-    padding-top: 20px;
-    border-bottom: solid 2px aliceblue;
-}*/
+
 .title_space{
     width: 750px;
     border-bottom: solid 1px #000;
@@ -69,6 +61,9 @@ title{
 }
 @media (max-width: 768px) {
     h1{
+        width: 100%;
+    }
+    .title_space{
         width: 100%;
     }
 }
