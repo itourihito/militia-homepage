@@ -66,10 +66,14 @@ h3{
     font-size: 2.0rem;
 }
 @media (max-width: 768px) {
-    h1,img,.title_space,.text_field,.topic_item{
+    h1,.newsimg,.title_space,.text_field,.topic_item{
         width: 100%;
     }
     .topic_item{
         padding: 20px;
     }
+    .title_space{
+        width: 100%;
+    }
+
 }
