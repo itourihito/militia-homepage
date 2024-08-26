@@ -301,6 +301,19 @@ footer{
     color: #000;
     font-size: 15px;
 }
+/* 通常のPC用画像 */
+.vtuber-img {
+    content: url('/img/VTuberlogo.png');
+}
+
+.esports-img {
+    content: url('/img/e-sportslogo.png');
+}
+
+/* スマホ用画像に切り替え */
+@media screen and (max-width: 768px) {
+    
+}
 /* メディアクエリ: タブレット */
 @media (max-width: 768px) {
     .vtuber-profiles, .news-list, .gallery-items, .social-icons {
@@ -339,6 +352,13 @@ footer{
     .news_list_item{
         margin-left: 10px;
         margin-right: 10px;
+    }
+    .vtuber-img {
+        content: url('/img/VTuberlogo2.png');
+    }
+
+    .esports-img {
+        content: url('/img/e-sportslogo2.png');
     }
 }
 /* メディアクエリ: スマートフォン */
