@@ -360,6 +360,12 @@ footer{
     .esports-img {
         content: url('/img/e-sportslogo2.png');
     }
+    .sns_section{
+        display: block;
+    }
+    .jimushotag{
+        margin: 0 auto;
+    }
 }
 /* メディアクエリ: スマートフォン */
 @media (max-width: 480px) {
