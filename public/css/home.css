@@ -338,8 +338,8 @@ footer{
         margin-bottom: 20px;
     }
     .news-img{
-        width: 100%;
-        margin: 0 0 20px;
+        width: 80%;
+        margin: 0 auto 20px;
     }
     .top-background{
         background-image: url('../img/topbackground_pad.png');
