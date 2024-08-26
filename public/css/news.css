@@ -14,16 +14,7 @@ title{
     margin:0;
     text-align: center;
 }
-/*h1{
-    margin: 0;
-    color: aliceblue;
-    width: 750px;
-    font-size: 4.0rem;
-    margin:0 auto 20px;
-    padding-top: 20px;
-    text-align: center;
-    border-bottom: solid 2px #000;
-}*/
+
 .title_space{
     width: 750px;
     border-bottom: solid 1px #000;
@@ -89,5 +80,8 @@ title{
     }
     .news_list_date{
         margin: 20px 0 0;
+    }
+    .title_space{
+        width: 100%;
     }
 }
