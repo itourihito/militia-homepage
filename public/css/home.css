@@ -364,7 +364,8 @@ footer{
         display: block;
     }
     .jimushotag{
-        margin: 0 auto;
+        margin: 0 auto 10px;
+        width: auto;
     }
 }
 /* メディアクエリ: スマートフォン */
