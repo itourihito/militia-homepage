@@ -75,7 +75,7 @@ title{
         flex-flow: column;
         padding: 0;
     }
-    .news_img,.news_list,h1{
+    .news_list,h1{
         width: 100%;
     }
     .news_list_item{
@@ -84,7 +84,8 @@ title{
         margin-right: 10px;
     }
     .news_img{
-        margin: 0;
+        margin: 0 auto;
+        width: 80%;
     }
     .news_list_date{
         margin: 20px 0 0;
